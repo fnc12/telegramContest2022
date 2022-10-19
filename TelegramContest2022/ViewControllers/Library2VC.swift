@@ -41,7 +41,7 @@ class Library2VC: UIViewController {
         viewModel.rowHeight = viewWidth / CGFloat(viewModel.imagesPerRow)
         viewModel.originalRowHeight = viewModel.rowHeight
         
-        let zoomLocation = CGPoint(x: viewModel.rowHeight * 2, y: viewModel.rowHeight * 10)
+        let zoomLocation = CGPoint(x: viewModel.rowHeight * 2, y: viewModel.rowHeight * 0)
         print("zoomLocation = \(zoomLocation)")
         calls.append(.zoomBegan(relativeScale: 1.0, location: zoomLocation))
         for i in stride(from: 1.0, to: 2.0, by: 0.01) {
@@ -55,11 +55,11 @@ class Library2VC: UIViewController {
         }
         calls.append(.zoomEnded(relativeScale: 2.0))*/
         
-        calls.append(.zoomBegan(relativeScale: 1.0, location: zoomLocation))
+        /*calls.append(.zoomBegan(relativeScale: 1.0, location: zoomLocation))
         for i in stride(from: 1.0, to: 0.5, by: -0.01) {
             calls.append(.zoomChanged(relativeScale: i))
         }
-        calls.append(.zoomEnded(relativeScale: 0.5))
+        calls.append(.zoomEnded(relativeScale: 0.5))*/
         
 //        let contentInsetAdjustmentBehavior = scrollView.contentInsetAdjustmentBehavior
         
@@ -83,7 +83,7 @@ class Library2VC: UIViewController {
         print("rowHeight = \(viewModel.rowHeight)")
         reloadData()
         
-//        runScript()
+        runScript()
         
         /*scroller.contentOffset = .init(x: -viewModel.rowHeight, y: -viewModel.rowHeight)
         scrollView.setContentOffset(.init(x: scrollView.contentOffset.x, y: -scroller.contentOffset.y), animated: false)
@@ -141,28 +141,35 @@ class Library2VC: UIViewController {
         }
     }
     
-    func perform(call: ScrollerCall) {
+    func perform(call: ScrollerCall, checkScaleAfterwads: Bool = true) {
         scroller.perform(call: call)
-        viewModel.rowHeight = viewModel.originalRowHeight * scroller.scale
+        viewModel.rowHeight = viewModel.rowHeight(for: scroller.scale)
         scrollView.contentSize = .init(width: scrollView.frame.width, height: scroller.zoomedContentSize.height)
-//        print("scrollView.setContentOffset(\(CGPoint(x: scrollView.contentOffset.x, y: -scroller.contentOffset.y)))")
         shouldSyncScrollerWithScrollView = false
         scrollView.setContentOffset(.init(x: scrollView.contentOffset.x, y: -scroller.contentOffset.y), animated: false)
         shouldSyncScrollerWithScrollView = true
-        let scrollViewYMax = scrollView.contentSize.height - scrollView.frame.height
-        /*if scrollView.contentOffset.y > scrollViewYMax {
-            print("scrollView contentOffset is invalid, scrollViewYMax = \(scrollViewYMax), scrollView.contentOffset.y = \(scrollView.contentOffset.y), content height = \(scrollView.contentSize.height), scrollView.height = \(scrollView.frame.height)")
-        }*/
         cells.forEach {
             $1.frame = .init(x: 0, y: CGFloat($0) * viewModel.rowHeight, width: scrollView.frame.width, height: viewModel.rowHeight)
         }
         refreshPhotosStartX()
         
-        if case ScrollerCall.zoomEnded = call {
-            let desiredImagesPerColumn = evaluateDesiredImagesPerColumn()
-            let desiredScale = viewModel.viewWidth / (viewModel.originalRowHeight * CGFloat(desiredImagesPerColumn))
-//            print("cells per screen width = \(viewModel.viewWidth / viewModel.rowHeight), desiredImagesPerColumn = \(desiredImagesPerColumn)")
-//            print("scale = \(scroller.scale), desiredScale = \(desiredScale)")
+        if checkScaleAfterwads {
+            if case ScrollerCall.zoomEnded = call {
+                let desiredImagesPerColumn = evaluateDesiredImagesPerColumn()
+                let desiredScale = viewModel.viewWidth / (viewModel.originalRowHeight * CGFloat(desiredImagesPerColumn))
+                print("cells per screen width = \(viewModel.viewWidth / viewModel.rowHeight), desiredImagesPerColumn = \(desiredImagesPerColumn)")
+                let relativeScale = desiredScale / scroller.scale
+                print("scale = \(scroller.scale), desiredScale = \(desiredScale), relativeScale = \(relativeScale)")
+                
+                /*//  zoom to desired scale
+                let calls: [ScrollerCall] = [
+                    .zoomBegan(relativeScale: 1.0, location: .init(x: 0, y: 0)),
+                    .zoomEnded(relativeScale: relativeScale)
+                ]
+                for call in calls {
+                    perform(call: call, checkScaleAfterwads: false)
+                }*/
+            }
         }
     }
     

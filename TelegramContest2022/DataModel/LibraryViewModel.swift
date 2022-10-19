@@ -22,6 +22,10 @@ class LibraryViewModel {
 //        return 1000
     }
     
+    func rowHeight(for scale: CGFloat) -> CGFloat {
+        originalRowHeight * scale
+    }
+    
     func calculate() {
         guard let fetchResult = fetchResult, imagesPerRow > 0 else {
             rowsCount = 0

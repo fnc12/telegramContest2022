@@ -53,24 +53,30 @@ class Scroller {
         guard let zoomContext = zoomContext else {
             fatalError()
         }
-        scale = zoomContext.startScale * relativeScale
-        zoomedContentSize = originalContentSize * scale
-        let xOffset = zoomContext.location.x - zoomContext.startContentOffset.x
-        let leftSideRatio = xOffset / zoomContext.startContentSize.width
-        let yOffset = zoomContext.location.y - zoomContext.startContentOffset.y
-        let rightSideRatio = yOffset / zoomContext.startContentSize.height
-        contentOffset.x = zoomContext.location.x - zoomedContentSize.width * leftSideRatio
-        let newContentOffsetY = zoomContext.location.y - zoomedContentSize.height * rightSideRatio
-        let contentOffsetYMax = -zoomedContentSize.height + viewportHeight
-//        print("newContentOffsetY = \(newContentOffsetY), contentOffsetYMax = \(contentOffsetYMax), zoomedContentSize.height = \(zoomedContentSize.height), viewportHeight = \(viewportHeight)")
-        if newContentOffsetY > 0 {
-            contentOffset.y = 0
-        } else if newContentOffsetY < contentOffsetYMax {
-//            print("Scroller: newContentOffsetY(\(newContentOffsetY)) > contentOffsetYMax(\(contentOffsetYMax))")
-            contentOffset.y = contentOffsetYMax
-        } else {
-            contentOffset.y = newContentOffsetY
+        update(newScale: zoomContext.startScale * relativeScale,
+               location: zoomContext.location,
+               startContentOffset: zoomContext.startContentOffset,
+               startContentSize: zoomContext.startContentSize)
+    }
+    
+    func update(newScale: CGFloat, location: CGPoint, startContentOffset: CGPoint, startContentSize: CGSize) {
+        let newZoomedContentSize = originalContentSize * newScale
+        update(newScale: newScale, newContentOffset: CGPoint(x: location.x - newZoomedContentSize.width * ((location.x - startContentOffset.x) / startContentSize.width),
+                                                             y: location.y - newZoomedContentSize.height * ((location.y - startContentOffset.y) / startContentSize.height)))
+    }
+    
+    func update(newScale: CGFloat, newContentOffset: CGPoint) {
+        var newContentOffset2 = newContentOffset
+        let newZoomedContentSize = originalContentSize * newScale
+        let contentOffsetYMax = -newZoomedContentSize.height + viewportHeight
+        if newContentOffset2.y > 0 {
+            newContentOffset2.y = 0
+        } else if newContentOffset2.y < contentOffsetYMax {
+            newContentOffset2.y = contentOffsetYMax
         }
+        scale = newScale
+        zoomedContentSize = newZoomedContentSize
+        contentOffset = newContentOffset2
     }
 }
 
