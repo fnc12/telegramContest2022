@@ -5,6 +5,7 @@ class Scroller {
     private(set) var originalContentSize: CGSize
     private(set) var zoomedContentSize: CGSize
     private(set) var scale = CGFloat(1)
+    var viewportHeight = CGFloat(0)
     
     private struct ZoomContext {
         let location: CGPoint
@@ -14,9 +15,10 @@ class Scroller {
     }
     private var zoomContext: ZoomContext?
     
-    init(originalContentSize: CGSize) {
+    init(originalContentSize: CGSize, viewportHeight: CGFloat) {
         self.originalContentSize = originalContentSize
         self.zoomedContentSize = originalContentSize
+        self.viewportHeight = viewportHeight
     }
     
     func zoomBegan(relativeScale: CGFloat, location: CGPoint) {
@@ -58,7 +60,17 @@ class Scroller {
         let yOffset = zoomContext.location.y - zoomContext.startContentOffset.y
         let rightSideRatio = yOffset / zoomContext.startContentSize.height
         contentOffset.x = zoomContext.location.x - zoomedContentSize.width * leftSideRatio
-        contentOffset.y = zoomContext.location.y - zoomedContentSize.height * rightSideRatio
+        let newContentOffsetY = zoomContext.location.y - zoomedContentSize.height * rightSideRatio
+        let contentOffsetYMax = -zoomedContentSize.height + viewportHeight
+//        print("newContentOffsetY = \(newContentOffsetY), contentOffsetYMax = \(contentOffsetYMax), zoomedContentSize.height = \(zoomedContentSize.height), viewportHeight = \(viewportHeight)")
+        if newContentOffsetY > 0 {
+            contentOffset.y = 0
+        } else if newContentOffsetY < contentOffsetYMax {
+//            print("Scroller: newContentOffsetY(\(newContentOffsetY)) > contentOffsetYMax(\(contentOffsetYMax))")
+            contentOffset.y = contentOffsetYMax
+        } else {
+            contentOffset.y = newContentOffsetY
+        }
     }
 }
 
@@ -78,15 +90,4 @@ enum ScrollerCall {
     case zoomBegan(relativeScale: CGFloat, location: CGPoint)
     case zoomChanged(relativeScale: CGFloat)
     case zoomEnded(relativeScale: CGFloat)
-    
-    /*var scale: CGFloat {
-        switch self {
-        case .zoomBegan(let relativeScale, _):
-            return relativeScale
-        case .zoomChanged(let relativeScale):
-            return relativeScale
-        case .zoomEnded(let relativeScale):
-            return relativeScale
-        }
-    }*/
 }

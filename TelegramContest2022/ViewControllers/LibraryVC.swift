@@ -83,7 +83,8 @@ class LibraryVC: UIViewController {
         viewModel.fetchResult = PHAsset.fetchAssets(with: .image, options: nil)
         viewModel.calculate()
         
-        scroller = .init(originalContentSize: .init(width: view.frame.width, height: viewModel.originalRowHeight * CGFloat(viewModel.rowsCount)))
+        scroller = .init(originalContentSize: .init(width: view.frame.width, height: viewModel.originalRowHeight * CGFloat(viewModel.rowsCount)),
+                         viewportHeight: tableView.frame.height)
         
         print("photosCount = \(viewModel.photosCount)")
         

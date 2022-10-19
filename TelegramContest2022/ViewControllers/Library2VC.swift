@@ -12,6 +12,7 @@ class Library2VC: UIViewController {
     
     var calls = [ScrollerCall]()
     var callIndex = -1
+    var shouldSyncScrollerWithScrollView: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,8 @@ class Library2VC: UIViewController {
 //                make.edges.equalToSuperview()
             }
         }
+        
+        view.layoutIfNeeded()
         
         let viewWidth = view.frame.width
         print("viewWidth = \(viewWidth)")
@@ -66,13 +69,15 @@ class Library2VC: UIViewController {
         }
     }
     
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         viewModel.fetchResult = PHAsset.fetchAssets(with: .image, options: nil)
         viewModel.calculate()
         
-        scroller = .init(originalContentSize: .init(width: view.frame.width, height: viewModel.originalRowHeight * CGFloat(viewModel.rowsCount)))
+        scroller = .init(originalContentSize: .init(width: view.frame.width, height: viewModel.originalRowHeight * CGFloat(viewModel.rowsCount)),
+                         viewportHeight: scrollView.frame.height)
         
         print("photosCount = \(viewModel.photosCount)")
         print("rowHeight = \(viewModel.rowHeight)")
@@ -85,6 +90,13 @@ class Library2VC: UIViewController {
         refreshPhotosStartX()*/
         
 //        scroller.scale = 2
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if let scrollView {
+            scroller?.viewportHeight = scrollView.frame.height
+        }
     }
     
     func runScript() {
@@ -110,7 +122,6 @@ class Library2VC: UIViewController {
         cells.removeAll()
         
         scrollView.contentSize = .init(width: view.frame.width, height: viewModel.rowHeight * CGFloat(viewModel.rowsCount))
-//        scrollView.contentOffset =
         let rowSize = CGSize(width: viewModel.viewWidth * scroller.scale, height: viewModel.rowHeight)
         for rowIndex in 0..<viewModel.rowsCount {
             ImagesRowView(frame: .init(origin: .init(x: 0, y: CGFloat(rowIndex) * viewModel.rowHeight), size: rowSize)).do {
@@ -134,7 +145,14 @@ class Library2VC: UIViewController {
         scroller.perform(call: call)
         viewModel.rowHeight = viewModel.originalRowHeight * scroller.scale
         scrollView.contentSize = .init(width: scrollView.frame.width, height: scroller.zoomedContentSize.height)
+//        print("scrollView.setContentOffset(\(CGPoint(x: scrollView.contentOffset.x, y: -scroller.contentOffset.y)))")
+        shouldSyncScrollerWithScrollView = false
         scrollView.setContentOffset(.init(x: scrollView.contentOffset.x, y: -scroller.contentOffset.y), animated: false)
+        shouldSyncScrollerWithScrollView = true
+        let scrollViewYMax = scrollView.contentSize.height - scrollView.frame.height
+        /*if scrollView.contentOffset.y > scrollViewYMax {
+            print("scrollView contentOffset is invalid, scrollViewYMax = \(scrollViewYMax), scrollView.contentOffset.y = \(scrollView.contentOffset.y), content height = \(scrollView.contentSize.height), scrollView.height = \(scrollView.frame.height)")
+        }*/
         cells.forEach {
             $1.frame = .init(x: 0, y: CGFloat($0) * viewModel.rowHeight, width: scrollView.frame.width, height: viewModel.rowHeight)
         }
@@ -143,8 +161,8 @@ class Library2VC: UIViewController {
         if case ScrollerCall.zoomEnded = call {
             let desiredImagesPerColumn = evaluateDesiredImagesPerColumn()
             let desiredScale = viewModel.viewWidth / (viewModel.originalRowHeight * CGFloat(desiredImagesPerColumn))
-            print("cells per screen width = \(viewModel.viewWidth / viewModel.rowHeight), desiredImagesPerColumn = \(desiredImagesPerColumn)")
-            print("scale = \(scroller.scale), desiredScale = \(desiredScale)")
+//            print("cells per screen width = \(viewModel.viewWidth / viewModel.rowHeight), desiredImagesPerColumn = \(desiredImagesPerColumn)")
+//            print("scale = \(scroller.scale), desiredScale = \(desiredScale)")
         }
     }
     
@@ -178,7 +196,10 @@ class Library2VC: UIViewController {
 
 extension Library2VC: UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        scroller.contentOffset = .init(x: scroller.contentOffset.x, y: -scrollView.contentOffset.y)
+        if shouldSyncScrollerWithScrollView {
+            scroller.contentOffset = .init(x: scroller.contentOffset.x, y: -scrollView.contentOffset.y)
+        }
+//        print("scrollViewDidScroll: scroller.y = \(scroller.contentOffset.y), scrollView.y = \(scrollView.contentOffset.y)")
 //        scrollView.setContentOffset(.init(x: scrollView.contentOffset.x, y: -scroller.contentOffset.y), animated: false)
     }
 }
