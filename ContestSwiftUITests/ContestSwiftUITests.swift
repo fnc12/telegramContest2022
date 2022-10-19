@@ -1,14 +1,14 @@
 //
-//  TelegramContest2022Tests.swift
-//  TelegramContest2022Tests
+//  ContestSwiftUITests.swift
+//  ContestSwiftUITests
 //
 //  Created by Yevgeniy Zakharov on 09.10.2022.
 //
 
 import XCTest
-@testable import TelegramContest2022
+@testable import ContestSwiftUI
 
-final class TelegramContest2022Tests: XCTestCase {
+final class ContestSwiftUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

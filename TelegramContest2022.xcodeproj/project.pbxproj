@@ -9,16 +9,35 @@
 /* Begin PBXBuildFile section */
 		EC6E2C1628F346CC000B4480 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C1528F346CC000B4480 /* AppDelegate.swift */; };
 		EC6E2C1828F346CC000B4480 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C1728F346CC000B4480 /* SceneDelegate.swift */; };
-		EC6E2C1A28F346CC000B4480 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C1928F346CC000B4480 /* ViewController.swift */; };
+		EC6E2C1A28F346CC000B4480 /* AccessVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C1928F346CC000B4480 /* AccessVC.swift */; };
 		EC6E2C1D28F346CC000B4480 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6E2C1B28F346CC000B4480 /* Main.storyboard */; };
 		EC6E2C1F28F346CD000B4480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6E2C1E28F346CD000B4480 /* Assets.xcassets */; };
 		EC6E2C2228F346CD000B4480 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC6E2C2028F346CD000B4480 /* LaunchScreen.storyboard */; };
-		EC6E2C2D28F346CD000B4480 /* TelegramContest2022Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C2C28F346CD000B4480 /* TelegramContest2022Tests.swift */; };
 		EC6E2C3728F346CD000B4480 /* TelegramContest2022UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C3628F346CD000B4480 /* TelegramContest2022UITests.swift */; };
 		EC6E2C3928F346CD000B4480 /* TelegramContest2022UITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C3828F346CD000B4480 /* TelegramContest2022UITestsLaunchTests.swift */; };
 		EC6E2C4828F34861000B4480 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = EC6E2C4728F34861000B4480 /* SnapKit */; };
 		EC6E2C4B28F34884000B4480 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = EC6E2C4A28F34884000B4480 /* Then */; };
 		EC6E2C4E28F34A94000B4480 /* UIImage+color.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C4D28F34A94000B4480 /* UIImage+color.swift */; };
+		EC6E2C5128F356F8000B4480 /* LibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C5028F356F8000B4480 /* LibraryVC.swift */; };
+		EC6E2C5428F35CC4000B4480 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C5328F35CC4000B4480 /* ImageCell.swift */; };
+		EC6E2C5C28F3617B000B4480 /* ContestSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C5B28F3617B000B4480 /* ContestSwiftUIApp.swift */; };
+		EC6E2C5E28F3617B000B4480 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C5D28F3617B000B4480 /* ContentView.swift */; };
+		EC6E2C6028F3617C000B4480 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6E2C5F28F3617C000B4480 /* Assets.xcassets */; };
+		EC6E2C6328F3617C000B4480 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC6E2C6228F3617C000B4480 /* Preview Assets.xcassets */; };
+		EC6E2C6D28F3617C000B4480 /* ContestSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C6C28F3617C000B4480 /* ContestSwiftUITests.swift */; };
+		EC6E2C7728F3617C000B4480 /* ContestSwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C7628F3617C000B4480 /* ContestSwiftUIUITests.swift */; };
+		EC6E2C7928F3617C000B4480 /* ContestSwiftUIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C7828F3617C000B4480 /* ContestSwiftUIUITestsLaunchTests.swift */; };
+		EC6E2C8528F3AD3B000B4480 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC6E2C8428F3AD3B000B4480 /* LibraryViewModel.swift */; };
+		EC93F91028F9A8A900C4C99B /* Scroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F90F28F9A8A900C4C99B /* Scroller.swift */; };
+		EC93F91228FA647A00C4C99B /* ScrollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F91128FA647A00C4C99B /* ScrollerTests.swift */; };
+		EC93F91428FB7CE300C4C99B /* TableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F91328FB7CE300C4C99B /* TableView.swift */; };
+		EC93F91828FBC84E00C4C99B /* MyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC93F91728FBC84E00C4C99B /* MyTableView.m */; };
+		EC93F91A28FBCB1100C4C99B /* TargetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC93F91928FBCB1100C4C99B /* TargetView.swift */; };
+		ECE4412A28FC638200E78A1D /* Library2VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE4412928FC638200E78A1D /* Library2VC.swift */; };
+		ECE4412C28FC8E3C00E78A1D /* ImagesRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE4412B28FC8E3C00E78A1D /* ImagesRowView.swift */; };
+		ECE827F928F5AC5200EB9B11 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE827F828F5AC5200EB9B11 /* GridView.swift */; };
+		ECE827FB28F6389600EB9B11 /* SinglePhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECE827FA28F6389600EB9B11 /* SinglePhotoView.swift */; };
+		ECF49EF728F74523003C98A8 /* LibraryZoomer.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECF49EF628F74523003C98A8 /* LibraryZoomer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,23 +55,61 @@
 			remoteGlobalIDString = EC6E2C1128F346CC000B4480;
 			remoteInfo = TelegramContest2022;
 		};
+		EC6E2C6928F3617C000B4480 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC6E2C0A28F346CC000B4480 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC6E2C5828F3617B000B4480;
+			remoteInfo = ContestSwiftUI;
+		};
+		EC6E2C7328F3617C000B4480 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EC6E2C0A28F346CC000B4480 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EC6E2C5828F3617B000B4480;
+			remoteInfo = ContestSwiftUI;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		EC6E2C1228F346CC000B4480 /* TelegramContest2022.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TelegramContest2022.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6E2C1528F346CC000B4480 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC6E2C1728F346CC000B4480 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EC6E2C1928F346CC000B4480 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EC6E2C1928F346CC000B4480 /* AccessVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessVC.swift; sourceTree = "<group>"; };
 		EC6E2C1C28F346CC000B4480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EC6E2C1E28F346CD000B4480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EC6E2C2128F346CD000B4480 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EC6E2C2328F346CD000B4480 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC6E2C2828F346CD000B4480 /* TelegramContest2022Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelegramContest2022Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EC6E2C2C28F346CD000B4480 /* TelegramContest2022Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramContest2022Tests.swift; sourceTree = "<group>"; };
 		EC6E2C3228F346CD000B4480 /* TelegramContest2022UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TelegramContest2022UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC6E2C3628F346CD000B4480 /* TelegramContest2022UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramContest2022UITests.swift; sourceTree = "<group>"; };
 		EC6E2C3828F346CD000B4480 /* TelegramContest2022UITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelegramContest2022UITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EC6E2C4D28F34A94000B4480 /* UIImage+color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+color.swift"; sourceTree = "<group>"; };
+		EC6E2C5028F356F8000B4480 /* LibraryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryVC.swift; sourceTree = "<group>"; };
+		EC6E2C5328F35CC4000B4480 /* ImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		EC6E2C5928F3617B000B4480 /* ContestSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContestSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC6E2C5B28F3617B000B4480 /* ContestSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestSwiftUIApp.swift; sourceTree = "<group>"; };
+		EC6E2C5D28F3617B000B4480 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		EC6E2C5F28F3617C000B4480 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EC6E2C6228F3617C000B4480 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		EC6E2C6828F3617C000B4480 /* ContestSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContestSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC6E2C6C28F3617C000B4480 /* ContestSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestSwiftUITests.swift; sourceTree = "<group>"; };
+		EC6E2C7228F3617C000B4480 /* ContestSwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContestSwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC6E2C7628F3617C000B4480 /* ContestSwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestSwiftUIUITests.swift; sourceTree = "<group>"; };
+		EC6E2C7828F3617C000B4480 /* ContestSwiftUIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContestSwiftUIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EC6E2C8428F3AD3B000B4480 /* LibraryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		EC93F90F28F9A8A900C4C99B /* Scroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scroller.swift; sourceTree = "<group>"; };
+		EC93F91128FA647A00C4C99B /* ScrollerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollerTests.swift; sourceTree = "<group>"; };
+		EC93F91328FB7CE300C4C99B /* TableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableView.swift; sourceTree = "<group>"; };
+		EC93F91528FBC84D00C4C99B /* TelegramContest2022-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TelegramContest2022-Bridging-Header.h"; sourceTree = "<group>"; };
+		EC93F91628FBC84E00C4C99B /* MyTableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTableView.h; sourceTree = "<group>"; };
+		EC93F91728FBC84E00C4C99B /* MyTableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyTableView.m; sourceTree = "<group>"; };
+		EC93F91928FBCB1100C4C99B /* TargetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetView.swift; sourceTree = "<group>"; };
+		ECE4412928FC638200E78A1D /* Library2VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library2VC.swift; sourceTree = "<group>"; };
+		ECE4412B28FC8E3C00E78A1D /* ImagesRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesRowView.swift; sourceTree = "<group>"; };
+		ECE827F828F5AC5200EB9B11 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		ECE827FA28F6389600EB9B11 /* SinglePhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePhotoView.swift; sourceTree = "<group>"; };
+		ECF49EF628F74523003C98A8 /* LibraryZoomer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryZoomer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +136,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC6E2C5628F3617B000B4480 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6E2C6528F3617C000B4480 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6E2C6F28F3617C000B4480 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,6 +166,9 @@
 				EC6E2C1428F346CC000B4480 /* TelegramContest2022 */,
 				EC6E2C2B28F346CD000B4480 /* TelegramContest2022Tests */,
 				EC6E2C3528F346CD000B4480 /* TelegramContest2022UITests */,
+				EC6E2C5A28F3617B000B4480 /* ContestSwiftUI */,
+				EC6E2C6B28F3617C000B4480 /* ContestSwiftUITests */,
+				EC6E2C7528F3617C000B4480 /* ContestSwiftUIUITests */,
 				EC6E2C1328F346CC000B4480 /* Products */,
 				EC6E2C4628F34861000B4480 /* Frameworks */,
 			);
@@ -99,6 +180,9 @@
 				EC6E2C1228F346CC000B4480 /* TelegramContest2022.app */,
 				EC6E2C2828F346CD000B4480 /* TelegramContest2022Tests.xctest */,
 				EC6E2C3228F346CD000B4480 /* TelegramContest2022UITests.xctest */,
+				EC6E2C5928F3617B000B4480 /* ContestSwiftUI.app */,
+				EC6E2C6828F3617C000B4480 /* ContestSwiftUITests.xctest */,
+				EC6E2C7228F3617C000B4480 /* ContestSwiftUIUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,7 +192,10 @@
 			children = (
 				EC6E2C1528F346CC000B4480 /* AppDelegate.swift */,
 				EC6E2C1728F346CC000B4480 /* SceneDelegate.swift */,
-				EC6E2C1928F346CC000B4480 /* ViewController.swift */,
+				ECF49EF528F7451C003C98A8 /* Services */,
+				EC6E2C8328F3AD2E000B4480 /* DataModel */,
+				EC6E2C5228F35CBD000B4480 /* Views */,
+				EC6E2C4F28F356E5000B4480 /* ViewControllers */,
 				EC6E2C4C28F34A8B000B4480 /* Extensions */,
 				EC6E2C1B28F346CC000B4480 /* Main.storyboard */,
 				EC6E2C1E28F346CD000B4480 /* Assets.xcassets */,
@@ -121,7 +208,7 @@
 		EC6E2C2B28F346CD000B4480 /* TelegramContest2022Tests */ = {
 			isa = PBXGroup;
 			children = (
-				EC6E2C2C28F346CD000B4480 /* TelegramContest2022Tests.swift */,
+				EC93F91128FA647A00C4C99B /* ScrollerTests.swift */,
 			);
 			path = TelegramContest2022Tests;
 			sourceTree = "<group>";
@@ -148,6 +235,85 @@
 				EC6E2C4D28F34A94000B4480 /* UIImage+color.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		EC6E2C4F28F356E5000B4480 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				EC6E2C1928F346CC000B4480 /* AccessVC.swift */,
+				EC6E2C5028F356F8000B4480 /* LibraryVC.swift */,
+				ECE4412928FC638200E78A1D /* Library2VC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		EC6E2C5228F35CBD000B4480 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EC6E2C5328F35CC4000B4480 /* ImageCell.swift */,
+				ECE827FA28F6389600EB9B11 /* SinglePhotoView.swift */,
+				ECE827F828F5AC5200EB9B11 /* GridView.swift */,
+				EC93F91328FB7CE300C4C99B /* TableView.swift */,
+				EC93F91628FBC84E00C4C99B /* MyTableView.h */,
+				EC93F91728FBC84E00C4C99B /* MyTableView.m */,
+				EC93F91528FBC84D00C4C99B /* TelegramContest2022-Bridging-Header.h */,
+				EC93F91928FBCB1100C4C99B /* TargetView.swift */,
+				ECE4412B28FC8E3C00E78A1D /* ImagesRowView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EC6E2C5A28F3617B000B4480 /* ContestSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				EC6E2C5B28F3617B000B4480 /* ContestSwiftUIApp.swift */,
+				EC6E2C5D28F3617B000B4480 /* ContentView.swift */,
+				EC6E2C5F28F3617C000B4480 /* Assets.xcassets */,
+				EC6E2C6128F3617C000B4480 /* Preview Content */,
+			);
+			path = ContestSwiftUI;
+			sourceTree = "<group>";
+		};
+		EC6E2C6128F3617C000B4480 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				EC6E2C6228F3617C000B4480 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		EC6E2C6B28F3617C000B4480 /* ContestSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC6E2C6C28F3617C000B4480 /* ContestSwiftUITests.swift */,
+			);
+			path = ContestSwiftUITests;
+			sourceTree = "<group>";
+		};
+		EC6E2C7528F3617C000B4480 /* ContestSwiftUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EC6E2C7628F3617C000B4480 /* ContestSwiftUIUITests.swift */,
+				EC6E2C7828F3617C000B4480 /* ContestSwiftUIUITestsLaunchTests.swift */,
+			);
+			path = ContestSwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		EC6E2C8328F3AD2E000B4480 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC6E2C8428F3AD3B000B4480 /* LibraryViewModel.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		ECF49EF528F7451C003C98A8 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				ECF49EF628F74523003C98A8 /* LibraryZoomer.swift */,
+				EC93F90F28F9A8A900C4C99B /* Scroller.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +376,59 @@
 			productReference = EC6E2C3228F346CD000B4480 /* TelegramContest2022UITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		EC6E2C5828F3617B000B4480 /* ContestSwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC6E2C7A28F3617C000B4480 /* Build configuration list for PBXNativeTarget "ContestSwiftUI" */;
+			buildPhases = (
+				EC6E2C5528F3617B000B4480 /* Sources */,
+				EC6E2C5628F3617B000B4480 /* Frameworks */,
+				EC6E2C5728F3617B000B4480 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ContestSwiftUI;
+			productName = ContestSwiftUI;
+			productReference = EC6E2C5928F3617B000B4480 /* ContestSwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EC6E2C6728F3617C000B4480 /* ContestSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC6E2C7D28F3617C000B4480 /* Build configuration list for PBXNativeTarget "ContestSwiftUITests" */;
+			buildPhases = (
+				EC6E2C6428F3617C000B4480 /* Sources */,
+				EC6E2C6528F3617C000B4480 /* Frameworks */,
+				EC6E2C6628F3617C000B4480 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC6E2C6A28F3617C000B4480 /* PBXTargetDependency */,
+			);
+			name = ContestSwiftUITests;
+			productName = ContestSwiftUITests;
+			productReference = EC6E2C6828F3617C000B4480 /* ContestSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EC6E2C7128F3617C000B4480 /* ContestSwiftUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EC6E2C8028F3617C000B4480 /* Build configuration list for PBXNativeTarget "ContestSwiftUIUITests" */;
+			buildPhases = (
+				EC6E2C6E28F3617C000B4480 /* Sources */,
+				EC6E2C6F28F3617C000B4480 /* Frameworks */,
+				EC6E2C7028F3617C000B4480 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EC6E2C7428F3617C000B4480 /* PBXTargetDependency */,
+			);
+			name = ContestSwiftUIUITests;
+			productName = ContestSwiftUIUITests;
+			productReference = EC6E2C7228F3617C000B4480 /* ContestSwiftUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -222,6 +441,7 @@
 				TargetAttributes = {
 					EC6E2C1128F346CC000B4480 = {
 						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1400;
 					};
 					EC6E2C2728F346CD000B4480 = {
 						CreatedOnToolsVersion = 14.0.1;
@@ -230,6 +450,17 @@
 					EC6E2C3128F346CD000B4480 = {
 						CreatedOnToolsVersion = 14.0.1;
 						TestTargetID = EC6E2C1128F346CC000B4480;
+					};
+					EC6E2C5828F3617B000B4480 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					EC6E2C6728F3617C000B4480 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = EC6E2C5828F3617B000B4480;
+					};
+					EC6E2C7128F3617C000B4480 = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = EC6E2C5828F3617B000B4480;
 					};
 				};
 			};
@@ -253,6 +484,9 @@
 				EC6E2C1128F346CC000B4480 /* TelegramContest2022 */,
 				EC6E2C2728F346CD000B4480 /* TelegramContest2022Tests */,
 				EC6E2C3128F346CD000B4480 /* TelegramContest2022UITests */,
+				EC6E2C5828F3617B000B4480 /* ContestSwiftUI */,
+				EC6E2C6728F3617C000B4480 /* ContestSwiftUITests */,
+				EC6E2C7128F3617C000B4480 /* ContestSwiftUIUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,6 +516,29 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EC6E2C5728F3617B000B4480 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC6E2C6328F3617C000B4480 /* Preview Assets.xcassets in Resources */,
+				EC6E2C6028F3617C000B4480 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6E2C6628F3617C000B4480 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6E2C7028F3617C000B4480 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -289,10 +546,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC6E2C1A28F346CC000B4480 /* ViewController.swift in Sources */,
+				EC93F91028F9A8A900C4C99B /* Scroller.swift in Sources */,
+				EC93F91428FB7CE300C4C99B /* TableView.swift in Sources */,
+				EC6E2C8528F3AD3B000B4480 /* LibraryViewModel.swift in Sources */,
+				EC6E2C1A28F346CC000B4480 /* AccessVC.swift in Sources */,
+				ECE4412A28FC638200E78A1D /* Library2VC.swift in Sources */,
+				ECE827F928F5AC5200EB9B11 /* GridView.swift in Sources */,
 				EC6E2C4E28F34A94000B4480 /* UIImage+color.swift in Sources */,
+				ECE4412C28FC8E3C00E78A1D /* ImagesRowView.swift in Sources */,
+				ECE827FB28F6389600EB9B11 /* SinglePhotoView.swift in Sources */,
 				EC6E2C1628F346CC000B4480 /* AppDelegate.swift in Sources */,
+				EC93F91828FBC84E00C4C99B /* MyTableView.m in Sources */,
 				EC6E2C1828F346CC000B4480 /* SceneDelegate.swift in Sources */,
+				ECF49EF728F74523003C98A8 /* LibraryZoomer.swift in Sources */,
+				EC6E2C5128F356F8000B4480 /* LibraryVC.swift in Sources */,
+				EC6E2C5428F35CC4000B4480 /* ImageCell.swift in Sources */,
+				EC93F91A28FBCB1100C4C99B /* TargetView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EC6E2C2D28F346CD000B4480 /* TelegramContest2022Tests.swift in Sources */,
+				EC93F91228FA647A00C4C99B /* ScrollerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +579,32 @@
 			files = (
 				EC6E2C3928F346CD000B4480 /* TelegramContest2022UITestsLaunchTests.swift in Sources */,
 				EC6E2C3728F346CD000B4480 /* TelegramContest2022UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6E2C5528F3617B000B4480 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC6E2C5E28F3617B000B4480 /* ContentView.swift in Sources */,
+				EC6E2C5C28F3617B000B4480 /* ContestSwiftUIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6E2C6428F3617C000B4480 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC6E2C6D28F3617C000B4480 /* ContestSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC6E2C6E28F3617C000B4480 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC6E2C7728F3617C000B4480 /* ContestSwiftUIUITests.swift in Sources */,
+				EC6E2C7928F3617C000B4480 /* ContestSwiftUIUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +620,16 @@
 			isa = PBXTargetDependency;
 			target = EC6E2C1128F346CC000B4480 /* TelegramContest2022 */;
 			targetProxy = EC6E2C3328F346CD000B4480 /* PBXContainerItemProxy */;
+		};
+		EC6E2C6A28F3617C000B4480 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC6E2C5828F3617B000B4480 /* ContestSwiftUI */;
+			targetProxy = EC6E2C6928F3617C000B4480 /* PBXContainerItemProxy */;
+		};
+		EC6E2C7428F3617C000B4480 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EC6E2C5828F3617B000B4480 /* ContestSwiftUI */;
+			targetProxy = EC6E2C7328F3617C000B4480 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -467,6 +772,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QDTPG5DB79;
@@ -479,7 +785,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -491,6 +797,8 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TelegramContest2022/Views/TelegramContest2022-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -501,6 +809,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QDTPG5DB79;
@@ -513,7 +822,7 @@
 				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -525,6 +834,7 @@
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "TelegramContest2022/Views/TelegramContest2022-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -606,6 +916,140 @@
 			};
 			name = Release;
 		};
+		EC6E2C7B28F3617C000B4480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ContestSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = QDTPG5DB79;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kz.outlawstudio.ContestSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EC6E2C7C28F3617C000B4480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ContestSwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = QDTPG5DB79;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kz.outlawstudio.ContestSwiftUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EC6E2C7E28F3617C000B4480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QDTPG5DB79;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kz.outlawstudio.ContestSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContestSwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ContestSwiftUI";
+			};
+			name = Debug;
+		};
+		EC6E2C7F28F3617C000B4480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QDTPG5DB79;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kz.outlawstudio.ContestSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ContestSwiftUI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ContestSwiftUI";
+			};
+			name = Release;
+		};
+		EC6E2C8128F3617C000B4480 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QDTPG5DB79;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kz.outlawstudio.ContestSwiftUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ContestSwiftUI;
+			};
+			name = Debug;
+		};
+		EC6E2C8228F3617C000B4480 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = QDTPG5DB79;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = kz.outlawstudio.ContestSwiftUIUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ContestSwiftUI;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -641,6 +1085,33 @@
 			buildConfigurations = (
 				EC6E2C4328F346CD000B4480 /* Debug */,
 				EC6E2C4428F346CD000B4480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC6E2C7A28F3617C000B4480 /* Build configuration list for PBXNativeTarget "ContestSwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC6E2C7B28F3617C000B4480 /* Debug */,
+				EC6E2C7C28F3617C000B4480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC6E2C7D28F3617C000B4480 /* Build configuration list for PBXNativeTarget "ContestSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC6E2C7E28F3617C000B4480 /* Debug */,
+				EC6E2C7F28F3617C000B4480 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EC6E2C8028F3617C000B4480 /* Build configuration list for PBXNativeTarget "ContestSwiftUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC6E2C8128F3617C000B4480 /* Debug */,
+				EC6E2C8228F3617C000B4480 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

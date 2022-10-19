@@ -3,12 +3,13 @@ import SnapKit
 import Then
 import PhotosUI
 
-class ViewController: UIViewController {
+class AccessVC: UIViewController {
     var accessIconImageView: UIImageView!
     var accessLabel: UILabel!
     var allowAccessButton: UIButton!
     
-    let accessLevel = PHAccessLevel.readWrite
+    @available(iOS 14, *)
+    var accessLevel: PHAccessLevel { .readWrite }
     
     struct AccessLabelText {
         static let `default` = "Access Your Photos and Videos"
@@ -62,40 +63,54 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: animated)
-        
-        let authorizationStatus = PHPhotoLibrary.authorizationStatus(for: accessLevel)
-        switch authorizationStatus {
-        case .restricted:
-            accessLabel.text = AccessLabelText.restricted
-        case .denied:
-            accessLabel.text = AccessLabelText.denied
-        default:
-            accessLabel.text = AccessLabelText.default
+        if #available(iOS 14.0, *) {
+            let authorizationStatus = PHPhotoLibrary.authorizationStatus(for: accessLevel)
+            switch authorizationStatus {
+            case .restricted:
+                accessLabel.text = AccessLabelText.restricted
+            case .denied:
+                accessLabel.text = AccessLabelText.denied
+            default:
+                accessLabel.text = AccessLabelText.default
+            }
         }
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        tryToGoToLibrary(authorizationStatus: PHPhotoLibrary.authorizationStatus(for: accessLevel))
+        if #available(iOS 14.0, *) {    //  TODO: add iOS 13 scenario
+            tryToGoToLibrary(authorizationStatus: PHPhotoLibrary.authorizationStatus(for: accessLevel))
+        }
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     //  MARK: - Private
     
     func tryToGoToLibrary(authorizationStatus: PHAuthorizationStatus) {
-        let authorizationStatus = PHPhotoLibrary.authorizationStatus(for: accessLevel)
-        if authorizationStatus == .authorized {
-            print("it is time to go to library")
+        if #available(iOS 14.0, *) {
+            let authorizationStatus = PHPhotoLibrary.authorizationStatus(for: accessLevel)
+            if authorizationStatus == .authorized {
+                let libraryVC = Library2VC()
+//                let libraryVC = LibraryVC()
+                navigationController?.pushViewController(libraryVC, animated: true)
+            }
         }
     }
     
     //  MARK: - Events
     
     @objc func allowAccessButtonTouched() {
-        PHPhotoLibrary.requestAuthorization(for: .readWrite) { [weak self] newStatus in
-            guard let self = self else { return }
-            self.tryToGoToLibrary(authorizationStatus: newStatus)
+        if #available(iOS 14.0, *) {
+            PHPhotoLibrary.requestAuthorization(for: .readWrite) { [weak self] newStatus in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    self.tryToGoToLibrary(authorizationStatus: newStatus)
+                }
+            }
         }
     }
-    
 }
 
